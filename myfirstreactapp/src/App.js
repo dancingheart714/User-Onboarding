@@ -49,7 +49,7 @@ const postNewUser = (newUser) => {
   axios
     .post("https://reqres.in/api/users", newUser)
     .then((res) => {
-      
+      setUser([...user, res.data])
       console.log(res)
     })
     .catch((err) => {
